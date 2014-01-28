@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="connection">
-        <form action="{{ path("sonata_user_admin_security_check") }}" method="post">
+        <form action="{{ path("fos_user_security_check") }}" method="post">
             {% if error %}
                 <div class="alert alert-error">{{ error|trans({}, 'SonataUserBundle') }}</div>
             {% endif %}
