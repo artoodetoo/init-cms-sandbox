@@ -1,7 +1,18 @@
 imports:
     - { resource: parameters.yml }
-    - { resource: @NetworkingInitCmsBundle/Resources/config/cms/cms_config.yml }
-
+    # init-cms
+    - { resource: cms/security_config.yml }
+    - { resource: cms/sonata_admin.yml }
+    - { resource: cms/sonata_doctrine_admin.yml }
+    - { resource: cms/sonata_block.yml }
+    - { resource: cms/stof_doctrine_extensions.yml }
+    - { resource: cms/symfony_cmf_routing_extra.yml }
+    - { resource: cms/mopa_bootstrap.yml }
+    - { resource: cms/sonata_media.yml }
+    - { resource: cms/jms_serializer.yml }
+    - { resource: cms/lexik_translation.yml }
+    - { resource: cms/ibrows_sonata_translation.yml }
+    - { resource: cms/ivory_ck_editor.yml }
 
 framework:
     #esi:             ~
@@ -136,15 +147,6 @@ networking_init_cms:
     content_types:
         - { name: 'Text' , class: 'Networking\InitCmsBundle\Entity\Text'}
         - { name: 'Gallery' , class: 'Networking\InitCmsBundle\Entity\GalleryView'}
-
-sonata_admin:
-    title:      Demo Sailing Club
-    options:
-        use_select2: false
-
-lexik_translation:
-    fallback_locale: en      # (required) default locale to use
-    managed_locales: [en, de]    # (required) locales that the bundle have to manage
 
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb'
