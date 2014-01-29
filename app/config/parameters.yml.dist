@@ -11,4 +11,6 @@ parameters:
     mailer_password:   ~
     locale:            en_US
     secret:            ThisTokenIsNotSoSecretChangeIt
-
+    # oauth
+    socials.facebook.client_id:      ~
+    socials.facebook.client_secret:  ~

@@ -124,8 +124,9 @@ networking_init_cms:
         page: "Application\\Networking\\InitCmsBundle\\Entity\\Page"
         user: "Application\\Networking\\InitCmsBundle\\Entity\\User"
     languages:
-        - {label: English, locale: en_US}
-        - {label: Deutsch, locale: de_CH}
+        - {label: English, locale: en_US, short_label: en}
+        - {label: Deutsch, locale: de_CH, short_label: de}
+        - {label: Русский, locale: ru_RU, short_label: ru}
     templates:
         'Sandbox_one_column_template':
             template: "ApplicationNetworkingInitCmsBundle:Default:one_column.html.twig"
@@ -177,5 +178,25 @@ sonata_user:
             controller:     NetworkingInitCmsBundle:CRUD
             translation:    SonataUserBundle
 
+hwi_oauth:
 
+    firewall_name: main
+
+    connect:
+        confirmation: true
+        #account_connector: hwi_oauth.user.provider.fosub_bridge
+        #registration_form_handler: hwi_oauth.registration.form.handler.fosub_bridge
+        #registration_form: fos_user.registration.form
+
+    resource_owners:
+        facebook:
+            type:                facebook
+            client_id:           %socials.facebook.client_id%
+            client_secret:       %socials.facebook.client_secret%
+            scope:               "email user_birthday"
+
+    fosub:
+        username_iterations: 30
+        properties:
+            facebook: facebookUid
 
