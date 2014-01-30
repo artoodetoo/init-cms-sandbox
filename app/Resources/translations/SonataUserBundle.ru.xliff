@@ -52,15 +52,15 @@
             </trans-unit>
             <trans-unit id="switch_user_exit">
                 <source>switch_user_exit</source>
-                <target>Exit impersonating mode</target>
+                <target>Прекратить имитацию</target>
             </trans-unit>
             <trans-unit id="switch_user">
                 <source>switch_user</source>
-                <target>Имитировать</target>
+                <target>Имитировать пользователя</target>
             </trans-unit>
             <trans-unit id="user_block_logout">
                 <source>user_block_logout</source>
-                <target>Logout</target>
+                <target>Выход</target>
             </trans-unit>
             <trans-unit id="user_form.label_username">
                 <source>form.label_username</source>

@@ -1,0 +1,53 @@
+services:
+    sandbox_init_cms.menu.frontend_menu_builder:
+        # class: Networking\InitCmsBundle\Component\Menu\FrontendMenuBuilder
+        class: Application\Networking\InitCmsBundle\Component\Menu\FrontendMenuBuilder
+        scope: request
+        arguments:
+            - @knp_menu.factory
+            - @security.context
+            - @request
+            - @router
+            - @networking_init_cms.menu_item_manager
+            - @translator
+
+    sandbox_init_cms.menu.frontend_main_menu_left:
+        class: Knp\Menu\MenuItem
+        factory_service: sandbox_init_cms.menu.frontend_menu_builder
+        factory_method: createMainMenu
+        arguments: [ '@request', "Main menu", "nav nav-tabs nav-main" ]
+        scope: request
+        tags:
+            - { name: knp_menu.menu, alias: mainMenu }
+
+    sandbox_init_cms.menu.frontend_main_menu_login:
+        class: Knp\Menu\MenuItem
+        factory_service: sandbox_init_cms.menu.frontend_menu_builder
+        factory_method: createLoginMenu
+        arguments: [ "nav nav-pills pull-right"]
+        scope: request
+        tags:
+            - { name: knp_menu.menu, alias: loginMenu }
+
+    sandbox_init_cms.menu.frontend_main_menu_language:
+        class: Knp\Menu\MenuItem
+        factory_service: sandbox_init_cms.menu.frontend_menu_builder
+        factory_method: createFrontendLangMenu
+        arguments: [ '@request', %networking_init_cms.page.languages%, "nav nav-pills pull-right", true ]
+        scope: request
+        tags:
+            - { name: knp_menu.menu, alias: langMenu }
+
+    sandbox_init_cms.menu.frontend_top_menu_template:
+        class: %mopa_bootstrap.navbar.generic%
+        scope: request
+        arguments:
+            - # menu list
+                pageMenu:  @sandbox_init_cms.menu.frontend_main_menu_left
+                langMenu:  @sandbox_init_cms.menu.frontend_main_menu_language
+                loginMenu: @sandbox_init_cms.menu.frontend_main_menu_login
+            - {}
+            - { logo: %site.logo%, title: %site.title%, titleRoute: "networking_init_cms_home", fixedTop: false, isFluid: false, template: ApplicationNetworkingInitCmsBundle:Navbar:navbar.html.twig }
+        tags:
+            - { name: mopa_bootstrap.navbar, alias: cmsNavbar }
+

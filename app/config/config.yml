@@ -13,6 +13,7 @@ imports:
     - { resource: cms/lexik_translation.yml }
     - { resource: cms/ibrows_sonata_translation.yml }
     - { resource: cms/ivory_ck_editor.yml }
+    - { resource: cms/services.yml }
 
 framework:
     #esi:             ~
@@ -162,8 +163,8 @@ fos_user:
 sonata_user:
     security_acl: true
     impersonating:
-        route:                networking_init_cms_admin
-        parameters:           { path: /}
+        route:                networking_init_cms_home
+        parameters:           { path: / }
     class:
         user: Application\Networking\InitCmsBundle\Entity\User
         group: Networking\InitCmsBundle\Entity\Group
