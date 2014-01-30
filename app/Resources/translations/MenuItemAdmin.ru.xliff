@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="" target-language="ru">
+        <body>
+            <trans-unit id="button.create.menu_item">
+                <source>button.create.menu_item</source>
+                <target>Add Item</target>
+            </trans-unit>
+            <trans-unit id="legend.menu.actions">
+                <source>legend.menu.actions</source>
+                <target>Actions on selected Menu</target>
+            </trans-unit>
+            <trans-unit id="filter.label_locale">
+                <source>filter.label_locale</source>
+                <target>Language</target>
+            </trans-unit>
+            <trans-unit id="button.menu.settings">
+                <source>button.menu.settings</source>
+                <target>Настроить меню</target>
+            </trans-unit>
+            <trans-unit id="button.menu.delete">
+                <source>button.menu.delete</source>
+                <target>Удалить меню</target>
+            </trans-unit>
+            <trans-unit id="title.page">
+                <source>title.page</source>
+                <target>Page</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_menu_item_navigation">
+                <source>breadcrumb.link_menu_item_navigation</source>
+                <target><![CDATA[<small>Настройте своё</small>]]> Меню</target>
+            </trans-unit>
+            <trans-unit id="label.linked_resource">
+                <source>label.linked_resource</source>
+                <target>Linked Resource</target>
+            </trans-unit>
+            <trans-unit id="label.menu_item_name">
+                <source>label.menu_item_name</source>
+                <target>Your Menu items</target>
+            </trans-unit>
+            <trans-unit id="menu.page_or_url.required">
+                <source>menu.page_or_url.required</source>
+                <target>Either a page or a redirect url must be set.</target>
+            </trans-unit>
+            <trans-unit id="btn_filter">
+                <source>btn_filter</source>
+                <target>Search</target>
+            </trans-unit>
+            <trans-unit id="label_filters">
+                <source>label_filters</source>
+                <target>Search Menus</target>
+            </trans-unit>
+            <trans-unit id="link_reset_filter">
+                <source>link_reset_filter</source>
+                <target>Reset</target>
+            </trans-unit>
+            <trans-unit id="form.label_name">
+                <source>form.label_name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="form.label_page">
+                <source>form.label_page</source>
+                <target>Page</target>
+            </trans-unit>
+            <trans-unit id="form.label_redirect_url">
+                <source>form.label_redirect_url</source>
+                <target>External URL</target>
+            </trans-unit>
+            <trans-unit id="help.redirect_url">
+                <source>help.redirect_url</source>
+                <target>URL starting with http://</target>
+            </trans-unit>
+            <trans-unit id="help.internal_url">
+                <source>help.internal_url</source>
+                <target>Path of CMS Page e.g. /contact</target>
+            </trans-unit>
+            <trans-unit id="label_redirect_url">
+                <source>label_redirect_url</source>
+                <target>Url</target>
+            </trans-unit>
+            <trans-unit id="form.label_link_target">
+                <source>form.label_link_target</source>
+                <target>Link Target</target>
+            </trans-unit>
+            <trans-unit id="form.label_link_class">
+                <source>form.label_link_class</source>
+                <target>Link Class</target>
+            </trans-unit>
+            <trans-unit id="form.label_internal_url">
+                <source>form.label_internal_url</source>
+                <target>Internal relative link</target>
+            </trans-unit>
+            <trans-unit id="form.label_hidden">
+                <source>form.label_hidden</source>
+                <target>Hide in menu</target>
+            </trans-unit>
+            <trans-unit id="form.label_link_rel">
+                <source>form.label_link_rel</source>
+                <target>Link Relation</target>
+            </trans-unit>
+            <trans-unit id="form.legend_page_or_url">
+                <source>form.legend_page_or_url</source>
+                <target>Target (page or url)</target>
+            </trans-unit>
+            <trans-unit id="form.legend_name">
+                <source>form.legend_name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="form.legend_options">
+                <source>form.legend_options</source>
+                <target>Options</target>
+            </trans-unit>
+            <trans-unit id="form.label_visibility">
+                <source>form.label_visibility</source>
+                <target>Visibility</target>
+            </trans-unit>
+            <trans-unit id="visibility_public">
+                <source>visibility_public</source>
+                <target>Public</target>
+            </trans-unit>
+            <trans-unit id="visibility_protected">
+                <source>visibility_protected</source>
+                <target>Protected</target>
+            </trans-unit>
+            <trans-unit id="form.label_description">
+                <source>form.label_description</source>
+                <target>Menu description</target>
+            </trans-unit>
+            <trans-unit id="visibility.helper.text">
+                <source>visibility.helper.text</source>
+                <target>Public or password protected menu item</target>
+            </trans-unit>
+            <trans-unit id="_blank">
+                <source>_blank</source>
+                <target>Shows the link target in a new browser window or tab</target>
+            </trans-unit>
+            <trans-unit id="_self">
+                <source>_self</source>
+                <target>Shows the link target in the current browser window</target>
+            </trans-unit>
+            <trans-unit id="_parent">
+                <source>_parent</source>
+                <target>Shows the link target in the parent frame</target>
+            </trans-unit>
+            <trans-unit id="_top">
+                <source>_top</source>
+                <target>Cancels all frames, and shows the link target in full browser window</target>
+            </trans-unit>
+            <trans-unit id="info.please_enter_description">
+                <source>info.please_enter_description</source>
+                <target>You haven't entered a description for you menu yet. How about letting others know where this menu appears and what it is for</target>
+            </trans-unit>
+            <trans-unit id="button.cancel">
+                <source>button.cancel</source>
+                <target>Cancel</target>
+            </trans-unit>
+            <trans-unit id="info.menu_sorted">
+                <source>info.menu_sorted</source>
+                <target>Menu items successfully re-ordered</target>
+            </trans-unit>
+            <trans-unit id="flash_edit_success">
+                <source>flash_edit_success</source>
+                <target>Menu successfully updated</target>
+            </trans-unit>
+            <trans-unit id="flash_create_success">
+                <source>flash_create_success</source>
+                <target>Menu successfully created</target>
+            </trans-unit>
+            <trans-unit id="flash_delete_success">
+                <source>flash_delete_success</source>
+                <target>Menu item successfully deleted</target>
+            </trans-unit>
+            <trans-unit id="flash_delete_children_error">
+                <source>flash_delete_children_error</source>
+                <target>Menu item not deleted. Please reorganise the sub-menu items first.</target>
+            </trans-unit>
+            <trans-unit id="menu.label">
+                <source>menu.label</source>
+                <target>Меню</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
