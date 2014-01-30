@@ -4,7 +4,7 @@ jms_security_extra:
 
 parameters:
     # ... other parameters
-    security.acl.permission.map.class: Networking\InitCmsBundle\Security\Acl\Permission\AdminPermissionMap
+    security.acl.permission.map.class:        Networking\InitCmsBundle\Security\Acl\Permission\AdminPermissionMap
     sonata.admin.security.mask.builder.class: Networking\InitCmsBundle\Security\Acl\Permission\MaskBuilder
 
 security:
@@ -65,8 +65,8 @@ security:
                 default_target_path: /profile/
                 failure_path:   null
             oauth:
-                failure_path: /connect
-                login_path: /connect
+                failure_path: /login
+                login_path: /login
                 check_path: /connect
                 provider: fos_userbundle
                 resource_owners:
