@@ -17,3 +17,5 @@ parameters:
     # oauth
     socials.facebook.client_id:      ~
     socials.facebook.client_secret:  ~
+    socials.vkontakte.client_id:     ~
+    socials.vkontakte.client_secret: ~

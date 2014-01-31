@@ -195,9 +195,15 @@ hwi_oauth:
             client_id:           %socials.facebook.client_id%
             client_secret:       %socials.facebook.client_secret%
             scope:               "email user_birthday"
+        vkontakte:
+            type:                vkontakte
+            client_id:           %socials.vkontakte.client_id%
+            client_secret:       %socials.vkontakte.client_secret%
+            #scope:               "friends,video,offline"
 
     fosub:
         username_iterations: 30
         properties:
-            facebook: facebookUid
+            facebook:  facebookUid
+            vkontakte: vkontakteUid
 
