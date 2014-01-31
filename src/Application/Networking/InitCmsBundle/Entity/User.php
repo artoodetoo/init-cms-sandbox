@@ -18,6 +18,14 @@ use Networking\InitCmsBundle\Entity\BaseUser;
 class User extends BaseUser
 {
     /**
+     * @var string $ref This User's reference code
+     */
+    protected $ref;
+    /**
+     * @var string $followRef Who do this user follow?
+     */
+    protected $followRef;
+    /**
      * @var string $vkontakteUid Identity from VK.COM
      */
     protected $vkontakteUid;
@@ -29,6 +37,58 @@ class User extends BaseUser
      * @var string $vkontakteData Extra data from VK.COM
      */
     protected $vkontakteData;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->ref = md5(uniqid());
+    }
+
+    /**
+     * Set ref
+     *
+     * @param string $ref
+     * @return User
+     */
+    public function setRef($ref)
+    {
+        $this->ref = $ref;
+    
+        return $this;
+    }
+
+    /**
+     * Get ref
+     *
+     * @return string 
+     */
+    public function getRef()
+    {
+        return $this->ref;
+    }
+
+    /**
+     * Set followRef
+     *
+     * @param string $followRef
+     * @return User
+     */
+    public function setFollowRef($followRef)
+    {
+        $this->followRef = $followRef;
+    
+        return $this;
+    }
+
+    /**
+     * Get followRef
+     *
+     * @return string 
+     */
+    public function getFollowRef()
+    {
+        return $this->followRef;
+    }
 
     /**
      * Set vkontakteUid

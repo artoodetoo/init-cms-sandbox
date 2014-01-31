@@ -12,6 +12,10 @@
 
         <field name="adminSettings" column="admin_settings" type="object" nullable="true"/>
 
+        <!-- partner program fields -->
+        <field name="ref"       column="ref"        type="string" length="50" nullable="true" />
+        <field name="followRef" column="follow_ref" type="string" length="50" nullable="true" />
+
         <!-- social fields -->
         <field name="vkontakteUid"  type="string" column="vkontakte_uid"  length="255" nullable="true" />
         <field name="vkontakteName" type="string" column="vkontakte_name" length="255" nullable="true" />
