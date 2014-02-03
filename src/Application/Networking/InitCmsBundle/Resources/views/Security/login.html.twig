@@ -1,8 +1,9 @@
 {% extends 'NetworkingInitCmsBundle::layout.html.twig' %}
 
 {% block content %}
-    <div class="connection">
-        <form action="{{ path("fos_user_security_check") }}" method="post">
+    <form action="{{ path("fos_user_security_check") }}" method="post">
+        <div class="row-fluid">
+        <div class="connection span6">
             {% if error %}
                 <div class="alert alert-error">{{ error|trans({}, 'SonataUserBundle') }}</div>
             {% endif %}
@@ -30,9 +31,23 @@
                 </label>
             </div>
 
-            <div class="well form-actions">
-                <input type="submit" class="btn btn-primary" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
+        </div>
+
+        <div class="connection span6">
+
+            <div class="control-group">
+                <h4>{{ 'security.login.connect_with'|trans({}, 'FOSUserBundle') }}:</h4>
+                {% for owner in hwi_oauth_resource_owners() %}
+                    <a href="{{ hwi_oauth_login_url(owner) }}">{{ owner | trans({}, 'HWIOAuthBundle') }}</a> <br />
+                {% endfor %}
             </div>
-        </form>
-    </div>
+
+        </div>
+        </div> <!-- row-fluid -->
+
+        <div class="well form-actions">
+            <input type="submit" class="btn btn-primary" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
+        </div>
+    </form>
+
 {% endblock content %}
