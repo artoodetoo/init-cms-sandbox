@@ -29,14 +29,13 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
-            new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new Sonata\MediaBundle\SonataMediaBundle(),
-            new Sonata\MarkItUpBundle\SonataMarkItUpBundle(),
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\FormatterBundle\SonataFormatterBundle(),
+            new \Sonata\IntlBundle\SonataIntlBundle(),
             new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
@@ -46,12 +45,14 @@ class AppKernel extends Kernel
             new Ibrows\SonataTranslationBundle\IbrowsSonataTranslationBundle(),
             new Networking\InitCmsBundle\NetworkingInitCmsBundle(),
             new Application\Networking\InitCmsBundle\ApplicationNetworkingInitCmsBundle(),
+            new Oneup\UploaderBundle\OneupUploaderBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+            $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
         }
 
         return $bundles;
